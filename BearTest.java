@@ -67,6 +67,28 @@ public class BearTest {
     assertNotNull(food);
     Chicken supreme = (Chicken)food;
     assertEquals("Bok bok bok", supreme.cluck());
-
   }
+
+  @Test
+  public void chickenIsNutritious(){
+    assertEquals(1400, chicken.getNutritionValue());
+  }
+
+  @Test
+  public void salmonIsNutritious(){
+    assertEquals(800, salmon.getNutritionValue());
+  }
+
+  @Test
+  public void peopleAreNutritious(){
+    assertEquals(110000, human.getNutritionValue());
+  }
+
+  @Test
+  public void canSumNutritionOfBellyContents(){
+    bear.eat(chicken);
+    bear.eat(salmon);
+    assertEquals(2200, bear.totalNutrition());
+  }
+
 }
