@@ -37,7 +37,7 @@ public class Bear {
   public int totalNutrition(){
     int total = 0;
     for (Edible morsel : belly){
-      total = total + (morsel.getNutritionValue());
+      total += (morsel.getNutritionValue());
   
     }
     return total;
