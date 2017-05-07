@@ -1,11 +1,7 @@
 public class Salmon implements Edible, Swimmable {
 
-  private int nutritionValue;
+  private int nutritionValue = 800;
 
-  public Salmon(){
-    this.nutritionValue = 800;
-  }
-  
   public String swim(){
    return "swimming";
   }
